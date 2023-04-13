@@ -1,0 +1,125 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-size: inherit;
+    font-weight: normal;
+    
+    box-sizing: border-box;
+}
+
+/* Bodyra tegyunk ra mindent, az mindig fix */
+body{
+    background-color: gray;
+    
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+
+    height: 100vh;
+
+    /* behelyezni a .modal childot a  viewport kozepebe flex-el body te egy flex vagy es helyezd el a child-jaid*/
+    display: flex;
+    /* vertikálisan közép */
+    justify-content: center;
+    /* horizontális közép */
+    align-items: center;
+
+}
+
+.modal{
+    background-color: white;
+    
+    width: 500px;
+    /* HEIGHT NEM KELL MERT EZ EGY BLOCK LEVEL height: 400px; */
+
+    border-radius: 5px;
+
+    padding: 15px;
+
+    /* FLEX-el hogy helyezek el mindent benne a jo helyre? + FLEX SHRINK SZUKSEGES LEJEBB */
+    display: flex;
+
+    /* GAP-el adom a tokeletes terkozt a gombok szoveg es egyebek kozott*/
+    gap: 15px;
+
+}
+
+/* BUTTONS */
+
+.icon{
+    background-color: lavender;
+    
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    /* most még nincs a ! jel a kor kozepen. hogy csinaljuk? */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* FLEX SHRINK - CSAK AZ ICON-RA - ez meghagyja a dimenziokat, nem nyomja ossze */
+    flex-shrink: 0;
+}
+
+.close-button{
+    background-color: lightgrey;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.continue{
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+    /* itt nem kell display flex, mert a button alabol kozepre helyezi */
+}
+
+.cancel{
+    background-color: white;
+    color: royalblue;
+    border: 1px solid rgb(216, 214, 214);
+}
+
+/* SZÖVEGEK */
+
+.header{
+    font-weight: 700;
+    font-size: 18px;
+
+    /* hogy helyezem a header elemeket a helyere? */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.text{
+    margin-bottom: 10px;
+
+    padding-right: 10px;
+}
